@@ -5,10 +5,10 @@
 <nav>
   <ul class="nav_menu">
     <li><a href="/">Home</a></li>
+    <li><a href="/speakers">Speakers</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="/tickets">Tickets</a></li>
     <li><a href="/program">Program</a></li>
-    <li><a href="/speakers">Speakers</a></li>
   </ul>
   <div class="hamburger">
     <span class="bar"></span>
@@ -27,11 +27,12 @@
     text-decoration: none;
   }
 
-  .navbar {
+  nav {
     min-height: 70px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     padding: 0 24px;
   }
 
@@ -39,7 +40,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     gap: 60px;
   }
   .hamburger {
@@ -53,18 +54,21 @@
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: black;
+    background-color: var(--primary-color);
   }
 
   @media (max-width: 768px) {
     .nav_menu {
+      flex-direction: column;
+      background-color: var(--card-color);
       position: absolute;
       overflow: hidden;
       left: -200%;
-      top: 4em;
-      gap: 0;
+      top: -1em;
+      gap: 5rem;
       padding: 0;
       width: 100%;
+      height: 100vh;
       text-align: center;
       transition: 0.3s;
     }

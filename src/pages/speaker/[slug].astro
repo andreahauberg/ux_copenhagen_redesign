@@ -25,10 +25,42 @@ console.log(myData);
 ---
 
 <MainLayout title={myData.name}>
-  <img src={myData.image} alt="Speaker Image" />
-  <h2>{myData.name}</h2>
-  <p>{myData.description}</p>
-  <a href="/speakers">
-    <Button title="Go Back" />
-  </a>
+  <article>
+    <img src={myData.image} alt="Speaker Image" />
+    <div>
+      <h2>{myData.name}</h2>
+      <p>{myData.description}</p>
+      <br /><br /><br />
+      <a href="/speakers"></a>
+      <Button title="Go Back" />
+    </div>
+  </article>
 </MainLayout>
+
+<style>
+  p {
+    max-width: 50ch;
+  }
+  article {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--card-color);
+    margin-bottom: 4em;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  img {
+    width: 80%;
+  }
+  @media (max-width: 800px) {
+    article {
+      grid-template-columns: 1fr;
+    }
+    img {
+      width: 70%;
+    }
+  }
+</style>

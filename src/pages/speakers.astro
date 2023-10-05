@@ -17,6 +17,7 @@ console.log(data);
 ---
 
 <MainLayout>
+  <h1>Speakers</h1>
   <section class="persons">
     {
       data.map((speaker) => {
@@ -25,3 +26,11 @@ console.log(data);
     }
   </section>
 </MainLayout>
+
+<style>
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+</style>
