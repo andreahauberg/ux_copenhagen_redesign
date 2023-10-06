@@ -3,7 +3,7 @@
     --primary-color:#6F0B1D;
     --primary-variant-color:#A00B27;
     --background-color:#F8F7F2;
-    --card-color:#EDE9D2;
+    --card-color:#cecbb6;
     --primary-text:#121212;
     --secondary-text:#FFFFFF;
     --h1-size:2.19rem;
@@ -34,6 +34,8 @@
 
   body{
     background-color: var(--background-color);
+    background-image:url("../mobil.svg") ;
+    background-size: cover;
   }
 
   h1{
